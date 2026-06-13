@@ -11,10 +11,16 @@ Select ONE Additional
 [ no ] Feature 3 - Use .slideDown() method
 [ no ] Feature 4 - Use .mouseover() method
 [ no ] Feature 5 - Use .fadeIn() method
+
+//i used the mouseover feature
 -->
+
+
 
 <!DOCTYPE html>
 <html>
+
+
   <head>
     <meta charset="utf-8" />
     <title>Unit 11 Project</title>
@@ -27,7 +33,7 @@ Select ONE Additional
     <h1> 3 Memories from <span>This Year</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Seeing Gospel</h3>
+        <h3 id="mem1" class="memory">Seeing Gospel</h3>
         <p>
           I really wanted to be in Gospel this year, but unfortunately (for some reason??) decided to stay in Show Choir.
           Throughout the year I'd peak through gospel's room and constantly talk to the people in it about the music 
@@ -50,7 +56,7 @@ Select ONE Additional
       </li>
 
       <li>
-        <h3 id="mem2">"Summertime" In Italian</h3>
+        <h3 id="mem2" class="memory">"Summertime" In Italian</h3>
         <p>Sometimes on off days, my Italian teacher would put on "Summertime", which is an Italian teen drama about a group of friends
           in high school going through the normal teen drama, you know, love and relationships, partying, family issues, the works.
           It's hella juicy so the class would be hyped every time my teacher would put it on. We all would gossip about the characters while watching and react at 
@@ -66,7 +72,7 @@ Select ONE Additional
       </li>
 
       <li>
-        <h3 id="mem3">Show Choir Rehearsals</h3>
+        <h3 id="mem3" class="memory">Show Choir Rehearsals</h3>
         <p>
           Show Choir rehearsals were definitely a commitment. Waking up early, heading into the city, and spending hours working on choreo and tough repertoire wasn't always easy, 
           but somehow we always found a way to make it fun.
@@ -82,11 +88,14 @@ Select ONE Additional
         <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMIlb5eGXRoEMkBQnZwi3QBxLhptCjT_xAEFr8SbKohGPkwiWOGcfDrw3m&s=10"
         width="400"
+        >
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+
+
 
       // ======================== Button #1
       $("#mem1-button").click(function () {
@@ -104,6 +113,14 @@ Select ONE Additional
         $("#mem3").text("Show Choir Rehearsals! 🎉");
       });
 
+      $("#mem2").html('"Summertime" In <em>Italian</em>');
+
+      //mouseover
+      $(".memory").mouseover(function () {
+        $(this).css("background-color", "orange");
+      });
+
+      $("h3").css("font-family", "Arial");
 
     </script>
     
